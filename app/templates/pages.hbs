@@ -4,8 +4,8 @@
       <div class="well sidebar-nav">
         <strong>Pages</strong>
         <ul class="list-group">
-          {{#each page in model}}
-            <li class="list-group-item">{{#link-to 'pages.page' this}}{{page.title}}{{/link-to}}</li>
+          {{#each controller}}
+            <li class="list-group-item">{{#link-to 'pages.page' this}}{{title}}{{/link-to}}</li>
           {{/each}}
         </ul>
       </div>

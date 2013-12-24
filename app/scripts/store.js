@@ -1,6 +1,4 @@
-Koi.Store = DS.Store.extend({
-  adapter: "_ams"
-});
+Koi.Store = DS.Store.extend();
 
 Koi.ApplicationAdapter = DS.ActiveModelAdapter.extend({
   host: 'http://localhost:3000',
@@ -9,3 +7,5 @@ Koi.ApplicationAdapter = DS.ActiveModelAdapter.extend({
     return s + ".json";
   }
 });
+
+Koi.ApplicationSerializer = DS.ActiveModelSerializer.extend();
