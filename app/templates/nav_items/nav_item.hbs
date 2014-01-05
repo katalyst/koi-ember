@@ -1,12 +1,5 @@
 <div class="well">
   <h1>{{title}}</h1>
   <p>{{url}}</p>
-  {{#if children.length}}
-    <h2>Children</h2>
-    <ul>
-      {{#each children}}
-        <li>{{#link-to 'nav_items.nav_item' this}}{{title}}{{/link-to}}</li>
-      {{/each}}
-    </ul>
-  {{/if}}
+  {{partial "children"}}
 </div>
