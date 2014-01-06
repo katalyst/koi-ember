@@ -1,5 +1,5 @@
 Koi.Router.map(function () {
-  this.resource('pages', { path: '/pages' }, function () {
+  this.resource('pages', { path: '/' }, function () {
     this.route('page', { path: '/:page_id' });
   });
   this.resource('nav_items', { path: '/nav_items' }, function () {

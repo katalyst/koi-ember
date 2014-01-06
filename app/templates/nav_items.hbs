@@ -5,7 +5,10 @@
         <strong>Nav Items</strong>
         <ul class="list-group">
           {{#each controller}}
-            <li class="list-group-item">{{#link-to 'nav_items.nav_item' this}}{{title}}{{/link-to}}</li>
+            <li class="list-group-item">
+              {{#link-to 'nav_items.nav_item' this}}{{title}}{{/link-to}}
+              <a {{bind-attr href=formattedURL}}>URL</a>
+            </li>
           {{/each}}
         </ul>
       </div>
