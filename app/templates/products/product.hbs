@@ -1,4 +1,5 @@
 <div class="well">
   <h1>{{name}}</h1>
-  Category: {{#link-to 'categories.category' category}}{{category.name}}{{/link-to}}
+  <p>Image: <img {{bind-attr src=thumb}} /></p>
+  <h2>Category: {{#link-to 'categories.category' category}}{{category.name}}{{/link-to}}</h2>
 </div>
