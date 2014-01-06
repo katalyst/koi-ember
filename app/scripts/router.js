@@ -1,3 +1,16 @@
+Koi.CurrentNavItemsController = Ember.ArrayController.extend({
+});
+
+Koi.initializer({
+  name: "loadNavItems",
+
+  initialize: function(container, application) {
+    var navItems = container.lookup('store:main').find('navItem');
+    var controller = container.lookup('controller:currentNavItems').set('content', navItems);
+    container.typeInjection('controller', 'currentNavItems', 'controller:currentNavItems')
+  }
+});
+
 Koi.Router.map(function () {
   this.resource('pages', { path: '/' }, function () {
     this.route('page', { path: '/:page_id' });

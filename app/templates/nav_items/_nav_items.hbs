@@ -1,0 +1,12 @@
+<li>
+  {{#if children.length}}
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{title}} <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      {{#each children}}
+        {{partial "nav_items/nav_items"}}
+      {{/each}}
+    </ul>
+  {{else}}
+    <a {{bind-attr href=formattedURL}}>{{title}}</a>
+  {{/if}}
+</li>
