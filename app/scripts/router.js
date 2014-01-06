@@ -8,6 +8,9 @@ Koi.Router.map(function () {
   this.resource('news_items', { path: '/news_items' }, function () {
     this.route('news_item', { path: '/:news_item_id' });
   });
+  this.resource('categories', { path: '/categories' }, function () {
+    this.route('category', { path: '/:category_id' });
+  });
 });
 
 Koi.NavItemsRoute = Ember.Route.extend({
@@ -43,5 +46,17 @@ Koi.PagesRoute = Ember.Route.extend({
 Koi.PageRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find('page', params.page_id);
+  }
+});
+
+Koi.CategoriesRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('category');
+  }
+});
+
+Koi.CategoryRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('category', params.category_id);
   }
 });
