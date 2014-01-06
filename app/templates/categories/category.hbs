@@ -1,3 +1,13 @@
 <div class="well">
   <h1>{{name}}</h1>
+  {{#if products.length}}
+    <h2>Products</h2>
+    <ul>
+      {{#each products}}
+        <li>
+          {{#link-to 'products.product' this}}{{name}}{{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
 </div>

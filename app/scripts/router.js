@@ -11,6 +11,9 @@ Koi.Router.map(function () {
   this.resource('categories', { path: '/categories' }, function () {
     this.route('category', { path: '/:category_id' });
   });
+  this.resource('products', { path: '/products' }, function () {
+    this.route('product', { path: '/:product_id' });
+  });
 });
 
 Koi.NavItemsRoute = Ember.Route.extend({
@@ -58,5 +61,17 @@ Koi.CategoriesRoute = Ember.Route.extend({
 Koi.CategoryRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find('category', params.category_id);
+  }
+});
+
+Koi.ProductsRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('product');
+  }
+});
+
+Koi.ProductRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('product', params.product_id);
   }
 });

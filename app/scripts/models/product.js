@@ -1,5 +1,4 @@
-Koi.NavItem = DS.Model.extend({
-  title: DS.attr('string'),
-  url: DS.attr('string'),
-  children: DS.hasMany('navItem', { async: true })
+Koi.Product = DS.Model.extend({
+  name: DS.attr('string'),
+  category: DS.belongsTo('category', { async: true })
 });
