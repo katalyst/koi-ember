@@ -22,21 +22,9 @@ Koi.NavItemsRoute = Ember.Route.extend({
   }
 });
 
-Koi.NavItemRoute = Ember.Route.extend({
-  model: function(params) {
-    return this.store.find('navItem', params.nav_item_id);
-  }
-});
-
 Koi.NewsItemsRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('newsItem');
-  }
-});
-
-Koi.NewsItemRoute = Ember.Route.extend({
-  model: function(params) {
-    return this.store.find('newsItem', params.news_item_id);
   }
 });
 
@@ -46,32 +34,14 @@ Koi.PagesRoute = Ember.Route.extend({
   }
 });
 
-Koi.PageRoute = Ember.Route.extend({
-  model: function(params) {
-    return this.store.find('page', params.page_id);
-  }
-});
-
 Koi.CategoriesRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('category');
   }
 });
 
-Koi.CategoryRoute = Ember.Route.extend({
-  model: function(params) {
-    return this.store.find('category', params.category_id);
-  }
-});
-
 Koi.ProductsRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('product');
-  }
-});
-
-Koi.ProductRoute = Ember.Route.extend({
-  model: function(params) {
-    return this.store.find('product', params.product_id);
   }
 });
